@@ -24,6 +24,7 @@
 - Middlewares (for routes)
 - Permissions ( for roles)
 - Policies ( for operations)
+- Delegate
 
 ## Design Patterns
 
