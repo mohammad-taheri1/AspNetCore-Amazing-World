@@ -10,14 +10,14 @@
 - Immutable objects
 - Clean Arch (why and implementation)
 - CQRS (with MediatR)
-- <span style="color:red;">Thread Safety</span>
-- <span style="color:red;">Immutable objects</span>
+- > Thread Safety
+- > Immutable objects
 - Dead Lock
 - Free Locking
-- <span style="color:red;">Thread Pool</span>
-- <span style="color:red;">Value Type vs Reference Type</span>
-- <span style="color:red;">Disposable Pattern</span>
-- <span style="color:red;">GC (Garbage Collector)</span>
+- > Thread Pool
+- > Value Type vs Reference Type
+- > Disposable Pattern
+- > GC (Garbage Collector)
 - Abstraction vs Interface
 - Polymorphism
 - Outbox Pattern
@@ -28,10 +28,10 @@
 ## Design Patterns
 
 - Singleton
-- <span style="color:red;">Factory</span>
+- > Factory
 - Decorator
 - Fascade
-- <span style="color:red;">Strategy</span>
+- > Strategy
 - Repository
 - Unit of Work
 
