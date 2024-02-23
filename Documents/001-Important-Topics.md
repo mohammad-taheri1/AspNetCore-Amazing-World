@@ -25,6 +25,7 @@
 - Permissions ( for roles)
 - Policies ( for operations)
 - Delegate
+- Error Handling & Global Error Handling
 
 ## Design Patterns
 
