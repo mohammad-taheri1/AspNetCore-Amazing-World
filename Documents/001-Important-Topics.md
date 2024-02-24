@@ -26,6 +26,7 @@
 - Policies ( for operations)
 - Delegate
 - Error Handling & Global Error Handling
+- Collections
 
 ## Design Patterns
 
