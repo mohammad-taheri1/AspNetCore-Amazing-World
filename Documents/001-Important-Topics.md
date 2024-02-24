@@ -27,6 +27,8 @@
 - Delegate
 - Error Handling & Global Error Handling
 - Collections
+- Database Sharding
+- Redis Caching
 
 ## Design Patterns
 
