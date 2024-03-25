@@ -3,19 +3,16 @@ using CleanArch.Infrastructure.Persistence.MSSQLServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CleanArch.Infrastructure.Migrations
+namespace CleanArch.Infrastructure.Migrations.AppMSSQLDb
 {
     [DbContext(typeof(AppMSSQLDbContext))]
-    [Migration("20240317235328_init")]
-    partial class init
+    partial class AppMSSQLDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

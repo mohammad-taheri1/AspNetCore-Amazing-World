@@ -1,4 +1,5 @@
 ﻿using CleanArch.Infrastructure.Persistence.MSSQLServer;
+using CleanArch.Infrastructure.Persistence.PostgreSQL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,17 +12,30 @@ namespace CleanArch.Presentation.API.Controllers
     {
         // Don't use Your Context Directly in Controller
         // This is Just for test 
-        private readonly AppMSSQLDbContext _context;
+        private readonly AppMSSQLDbContext _appMSSQLDbContext;
+        private readonly AppPostgreSQLDbContext _appPostgreSQLDbContext;
 
-        public TestDBController(AppMSSQLDbContext context)
+        public TestDBController(AppMSSQLDbContext appMSSQLDbContext, AppPostgreSQLDbContext appPostgreSQLDbContext)
         {
-            _context = context;
+            _appMSSQLDbContext = appMSSQLDbContext;
+            _appPostgreSQLDbContext = appPostgreSQLDbContext;
+        }
+
+
+        [HttpGet]
+        [Route("get-from-ms-sql-server")]
+        public async Task<IActionResult> GetStudentsFromMSSQLServer()
+        {
+            var result = await _appMSSQLDbContext.Students.ToListAsync();
+
+            return Ok(result);
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetStudents()
+        [Route("get-from-postgresql")]
+        public async Task<IActionResult> GetStudentsFromPostgreSQL()
         {
-            var result = await _context.Students.ToListAsync();
+            var result = await _appPostgreSQLDbContext.Students.ToListAsync();
 
             return Ok(result);
         }

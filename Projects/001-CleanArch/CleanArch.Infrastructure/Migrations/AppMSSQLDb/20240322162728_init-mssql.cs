@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace CleanArch.Infrastructure.Migrations
+namespace CleanArch.Infrastructure.Migrations.AppMSSQLDb
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class initmssql : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
