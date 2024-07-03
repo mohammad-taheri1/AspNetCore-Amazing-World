@@ -1,5 +1,7 @@
-﻿using CleanArch.Infrastructure.Persistence.MSSQLServer;
+﻿using CleanArch.Domain.IRepositories;
+using CleanArch.Infrastructure.Persistence.MSSQLServer;
 using CleanArch.Infrastructure.Persistence.PostgreSQL;
+using CleanArch.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +26,10 @@ namespace CleanArch.Infrastructure
                 var connectionString = configuration.GetConnectionString("localpostgresql");
                 options.UseNpgsql(connectionString);
             });
+            #endregion
+
+            #region Inject Repositories
+            services.AddScoped<IStudentRepository, StudentRepository>();
             #endregion
 
             return services;
