@@ -9,14 +9,17 @@ namespace CleanArch.Infrastructure.Persistence.MSSQLServer
         {
         }
 
-        public DbSet<Student>  Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Student>().ToTable("Students");
-            modelBuilder.Entity<Student>().HasKey(q => q.Id);
-        }
+        //    modelBuilder.Entity<Student>().ToTable("Students");
+        //    modelBuilder.Entity<Student>().HasKey(q => q.Id);
+        //}
     }
 }
